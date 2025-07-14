@@ -74,6 +74,7 @@ async def login(request: Request, voter_id: str, password: str):
     return {'token': token, 'role': role
 }
 
+# passwords stored in DB must me hashed,or encrypted 
 # Replace 'admin' with the actual role based on authentication
 async def get_role(voter_id, password):
     try:
